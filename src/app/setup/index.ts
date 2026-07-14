@@ -3,10 +3,13 @@ let counter = 0
 export function setupCounter(element: HTMLButtonElement) {
   element.addEventListener('click', () => {
     counter++
-    element.innerHTML = `Count is ${counter}`
+    element.innerHTML = `UI Loading...`
+    setTimeout(() => {
+      window.location.href = '/html/'
+    }, 3000);
   })
-  
-  element.innerHTML = `Count is ${counter}`
+
+  element.innerHTML = `Click Me!`
 }
 
 const app = document.querySelector<HTMLDivElement>('#app')
